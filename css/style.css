@@ -95,8 +95,120 @@ header {
     gap: 25px;
 }
 
+.filters__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.elements,
+.weapons {
+    display: flex;
+    gap: 3px;
+}
+
 .elements img,
 .weapons img {
     width: 60px;
     height: 60px;
+}
+
+/* Characters list */
+
+.characters__list {
+    margin-top: 20px;
+}
+
+.characters__wrapper {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 30px;
+    margin-top: 15px;
+}
+
+/* Character */
+
+
+.character__avatar {
+    position: relative;
+}
+
+.character__card {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.character__info {
+    opacity: 0;
+    transition: .2s ease;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(180deg, #0000 13%, #000 100%);
+}
+
+.character:hover .character__info {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.character__stars {
+    display: flex;
+    gap: 4px;
+}
+
+.character__fighting {
+    display: flex;
+    gap: 3px;
+}
+
+.character__fighting img {
+    width: 40px;
+    height: 40px;
+}
+
+.character__identificator {
+    justify-content: stretch;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.character__name{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.character__title{
+    font-size: 20px;
+}
+
+
+
+/* Footer */
+
+footer{
+    margin-top: 50px;
+    display: flex;
+    height: 100px;
+    background-color: var(--color-accent);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 60%;
+    color: var(--color-background);
+    font-family: var(--font-logo);
+    font-size: 70px;
+    font-weight: bold;
 }
