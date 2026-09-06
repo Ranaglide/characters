@@ -1,5 +1,8 @@
+// base url for api
 const base_url = "https://genshin.jmp.blue"
 
+
+// gets list of characters and their info, returns result in callback function
 const get_characters_list = async (callback) => {
     fetch(`${base_url}/characters/all`, {
         method: "GET",
@@ -12,5 +15,6 @@ const get_characters_list = async (callback) => {
 }
 
 get_characters_list((r)=>{
-    console.log(r)
+    console.log(r);
+    
 })
