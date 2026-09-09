@@ -35,10 +35,9 @@ const filter_characters = () => {
 
 // fill data on first load of page
 get_characters_list((data) => {
+    console.log(data);
+    
     characters = data
     filter_characters()
     fill_characters_list()
 })
-
-
-
