@@ -52,10 +52,10 @@ const open_overlay = (character) => {
     }
 
     // set weapon image icon
-    overlay.querySelector(".character__weapon").src = `img/weapons/${character.weapon_type}.png`
+    overlay.querySelector(".character__weapon").src = `img/weapons/${character.weapon_type.toLowerCase()}.png`
 
     // set element image icon
-    overlay.querySelector(".character__element").src = `img/elements/${character.vision_key}.png`
+    overlay.querySelector(".character__element").src = `img/elements/${character.vision_key.toLowerCase()}.png`
 
     // set description if exists. else no description
     overlay.querySelector(".panel__description").textContent = character.description.length ? character.description : "This character has no description."
@@ -159,11 +159,11 @@ const create_character_card = (character) => {
     character_fighting.classList.add("character__fighting")
 
     let character_weapon = document.createElement("img")
-    character_weapon.src = `img/weapons/${character.weapon}.png`
+    character_weapon.src = `img/weapons/${character.weapon_type.toLowerCase()}.png`
     character_weapon.setAttribute("weapon", character.weapon)
     character_fighting.appendChild(character_weapon)
     let character_element = document.createElement("img")
-    character_element.src = `img/elements/${character.vision}.png`
+    character_element.src = `img/elements/${character.vision_key.toLowerCase()}.png`
     character_weapon.setAttribute("element", character.vision)
     character_fighting.appendChild(character_element)
 

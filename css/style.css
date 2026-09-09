@@ -202,6 +202,7 @@ header {
     position: absolute;
     bottom: 0;
     height: 50%;
+    justify-content: space-between;
     left: 0;
     width: 100%;
     display: flex;
