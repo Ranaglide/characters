@@ -148,8 +148,12 @@ header {
 
 .elements img,
 .weapons img {
+    filter: saturate(0) brightness(.3);
     width: 60px;
     height: 60px;
+}
+.elements .active,.weapons .active{
+    filter: saturate(1) brightness(1);
 }
 
 /* Characters list */
@@ -160,7 +164,6 @@ header {
 
 .characters__wrapper {
     width: 100%;
-    justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
     gap: 30px;
@@ -242,18 +245,16 @@ header {
 /* Footer */
 
 footer {
-    margin-top: 50px;
-    display: flex;
-    height: 100px;
-    background-color: var(--color-accent);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    line-height: 60%;
-    color: var(--color-background);
-    font-family: var(--font-logo);
-    font-size: 70px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    font-size: 70px;
+    font-family: var(--font-logo);
+    margin-top: 50px;
 }
 
 
@@ -346,7 +347,7 @@ footer {
 .general__identifier {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .general__name {
@@ -358,6 +359,7 @@ footer {
 }
 
 .general__title {
+    max-width: 80%;
     font-size: 40px;
 }
 
@@ -422,7 +424,7 @@ footer {
 }
 
 .talent__title {
-    line-height: 60%;
+    line-height: 90%;
     font-size: 30px;
     font-weight: bold;
     color: var(--color-accent);

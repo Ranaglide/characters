@@ -13,8 +13,3 @@ const get_characters_list = async (callback) => {
         callback(response)
     })
 }
-
-get_characters_list((r)=>{
-    console.log(r);
-    
-})
